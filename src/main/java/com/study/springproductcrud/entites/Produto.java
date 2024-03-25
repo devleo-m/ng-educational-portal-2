@@ -1,6 +1,6 @@
-package com.study.springproductcrud.model;
+package com.study.springproductcrud.entites;
 
-public class ProdutoModel {
+public class Produto {
 
     //#region Atributos
     private Integer id;

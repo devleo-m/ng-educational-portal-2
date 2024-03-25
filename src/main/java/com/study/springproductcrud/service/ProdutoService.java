@@ -1,6 +1,6 @@
 package com.study.springproductcrud.service;
 
-import com.study.springproductcrud.model.ProdutoModel;
+import com.study.springproductcrud.entites.Produto;
 import com.study.springproductcrud.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ public class ProdutoService {
      * Metodo para retornar uma lista de produtos
      * @return Lista de produtos.
      */
-    public List<ProdutoModel> obterTodos(){
+    public List<Produto> obterTodos(){
         return produtoRepository.obterTodos();
     }
 
@@ -27,7 +27,7 @@ public class ProdutoService {
      * @param id do produto que sera localizado
      * @return retorna um produto caso seja encontrado
      */
-    public Optional<ProdutoModel> obterProdutoPorId(Integer id) {
+    public Optional<Produto> obterProdutoPorId(Integer id) {
         return produtoRepository.obterProdutoPorId(id);
     }
 
@@ -36,7 +36,7 @@ public class ProdutoService {
      * @param produto que seja adicionado
      * @return retorna o produto que foi adicionado na lista
      */
-    public ProdutoModel adicionarProduto(ProdutoModel produto){
+    public Produto adicionarProduto(Produto produto){
         return produtoRepository.adicionarProduto(produto);
     }
 
@@ -46,7 +46,7 @@ public class ProdutoService {
      * @param id do produto
      * @return retorna o produto apos atualizar a lista
      */
-    public ProdutoModel atualizarProduto(Integer id, ProdutoModel produto){
+    public Produto atualizarProduto(Integer id, Produto produto){
         produto.setId(id);
         return produtoRepository.atualizarProduto(produto);
     }

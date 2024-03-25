@@ -1,6 +1,6 @@
 package com.study.springproductcrud.controller;
 
-import com.study.springproductcrud.model.ProdutoModel;
+import com.study.springproductcrud.entites.Produto;
 import com.study.springproductcrud.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,19 +17,19 @@ public class ProdutoController {
 
     //VISUALIZAR PRODUTOS - GET
     @GetMapping()
-    private List<ProdutoModel> obterTodos(){
+    private List<Produto> obterTodos(){
         return produtoService.obterTodos();
     }
 
     //VISUALIZAR PRODUTOS POR ID - GET
     @GetMapping("/{id}")
-    public Optional<ProdutoModel> obterProdutoPorId(@PathVariable Integer id){
+    public Optional<Produto> obterProdutoPorId(@PathVariable Integer id){
         return produtoService.obterProdutoPorId(id);
     }
 
     //ADICIONAR/CRIAR PRODUTO - POST
     @PostMapping
-    private ProdutoModel adicionar(@RequestBody ProdutoModel produto){
+    private Produto adicionar(@RequestBody Produto produto){
         return produtoService.adicionarProduto(produto);
     }
 
@@ -42,7 +42,7 @@ public class ProdutoController {
 
     //ATUALIZAR PRODUTO - PUT
     @PutMapping("/{id}")
-    public ProdutoModel atualizarProduto(@PathVariable Integer id, @RequestBody ProdutoModel produto){
+    public Produto atualizarProduto(@PathVariable Integer id, @RequestBody Produto produto){
         return produtoService.atualizarProduto(id, produto);
     }
 }
