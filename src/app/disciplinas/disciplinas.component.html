@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<div class="app">
+  <p><strong>Aluno(a):</strong> {{user.nome}}</p>
+  <h2>Curso {{curso.nome}} - Grade Curricular</h2>
+
+  <div class="grade-semestres">
+
+    <div *ngFor="let semestre of semestres">      
+      <div  class="semestre">
+        <h3 class="titulo">
+          <span>{{semestre}}</span>
+          semestre
+        </h3>
+        <ul class="disciplinas">
+          <li *ngFor="let disciplina of disciplinasSemestre[semestre]">{{disciplina.nome}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

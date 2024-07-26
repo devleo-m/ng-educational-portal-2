@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h2>Menu</h2>
+    <button class="close-btn" (click)="fechar()">X</button>
+  </div>
+  <div class="menu-items">
+    <button [routerLink]="['/disciplinas']">Disciplinas</button>
+    <button [routerLink]="['/alunos']">Alunos</button>
+    <button>Atividades Avaliativas</button>
+    <button>Solicitações</button>
+    <button>Biblioteca Online</button>
+    <button *ngIf="admin">Usuários</button>
+  </div>
+  <div class="sidebar-footer">
+    <button (click)="sair()">Logout</button>
+  </div>
+</div>
+<div class="overlay" (click)="fechar()"></div>

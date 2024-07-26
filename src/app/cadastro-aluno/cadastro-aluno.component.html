@@ -1,0 +1,58 @@
+<app-header></app-header>
+
+<div class="app">
+  <form [formGroup]="formCadastro" (ngSubmit)="submitForm()">
+
+    <div>
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" formControlName="nome" />
+      <span
+        *ngIf="(formCadastro.controls['nome'].touched || formCadastro.controls['nome'].dirty) && formCadastro.controls['nome'].errors?.['required']"
+        >Nome Completo obrigatório</span
+      >
+    </div>
+    <div>
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" formControlName="cpf" />
+      <span
+        *ngIf="(formCadastro.controls['cpf'].touched || formCadastro.controls['cpf'].dirty) && formCadastro.controls['cpf'].errors?.['required']"
+        >CPF obrigatório</span
+      >
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" formControlName="email" />
+      <span
+        *ngIf="(formCadastro.controls['email'].touched || formCadastro.controls['email'].dirty) && formCadastro.controls['email'].errors?.['required']"
+        >Email obrigatório</span
+      >
+    </div>
+    <div>
+      <label for="celular">Celular:</label>
+      <input type="tel" id="celular" name="celular" formControlName="celular" />
+      <span
+        *ngIf="(formCadastro.controls['celular'].touched || formCadastro.controls['celular'].dirty) && formCadastro.controls['celular'].errors?.['required']"
+        >Celular obrigatório</span
+      >
+    </div>
+    <div>
+      <label for="curso">Curso:</label>
+      <select name="curso" id="curso" formControlName="curso">
+        <option value="">Selecione um curso</option>
+          <option *ngFor="let curso of cursos " value="{{curso.id}}">{{curso.nome}}</option>
+      </select>
+      <span
+        *ngIf="(formCadastro.controls['curso'].touched || formCadastro.controls['curso'].dirty) && formCadastro.controls['curso'].errors?.['required']"
+        >Curso obrigatório</span
+      >
+    </div>
+    <div class="botoes">
+      <button
+        type="submit"
+        [disabled]="!formCadastro.valid"
+      >
+      {{ idUsuario ? 'Editar' : 'Cadastrar' }}
+      </button>
+    </div>
+  </form>
+</div>

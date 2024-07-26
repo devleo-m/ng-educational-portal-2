@@ -1,0 +1,12 @@
+<header>
+  <div class="logo">
+    <h4>BookClub</h4>
+  </div>
+    <div class="user-info">
+        <span id="username"> {{user.nome}}</span>
+        <div class="dropdown" (click)="callSidebar()">
+            <img src="https://via.placeholder.com/40" alt="Avatar">
+        </div>
+    </div>
+</header>
+<app-sidebar *ngIf="showSideBar" [admin]="user.admin" (closeSidebar)="closeSidebar()"></app-sidebar>

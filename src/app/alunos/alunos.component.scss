@@ -1,0 +1,139 @@
+.app {
+  padding: 20px;
+  max-width: 960px;
+  margin: auto;
+  background-color: #f5f7f9;
+
+  form {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 100%;
+        max-width: 400px;
+        border: 1px solid #ddd;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 16px;
+        color: #333;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+
+        &::placeholder {
+          color: #999;
+        }
+
+        &:focus {
+          border-color: #4a90e2;
+          outline: none;
+        }
+      }
+    }
+
+    .botoes {
+      display: flex;
+      gap: 16px;
+
+      button {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        color: #ffffff;
+        background-color: #4a90e2;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+          background-color: #357abd;
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+    thead {
+      background-color: #4a90e2;
+      color: #ffffff;
+
+
+      th {
+        font-weight: 600;
+        font-size: 16px;
+        padding: 12px;
+        text-align: left;
+        border-radius: 8px;
+      }
+    }
+
+    tbody {
+      background-color: #ffffff;
+
+      tr {
+        &:nth-child(odd) {
+          background-color: #f9f9f9;
+        }
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
+
+        td {
+          padding: 12px;
+          border-bottom: 1px solid #ddd;
+
+          button {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+
+            &.edit-btn {
+              background-color: #4a90e2;
+              color: #ffffff;
+
+              &:hover {
+                background-color: #357abd;
+              }
+            }
+
+            &.delete-btn {
+              background-color: #e94e77;
+              color: #ffffff;
+
+              &:hover {
+                background-color: #d03a5e;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

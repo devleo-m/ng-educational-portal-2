@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<div class="app">
+  <form [formGroup]="formPesquisa" (ngSubmit)="pesquisar()">
+    <div>
+      <label for="pesquisar">Pesquisar:</label>
+      <input
+        type="text"
+        id="pesquisar"
+        name="pesquisar"
+        formControlName="pesquisar"
+        placeholder="Buscar por nome ou email"
+      />
+    </div>
+    <div class="botoes">
+      <button type="submit" >Pesquisar</button>
+    </div>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>E-mail</th>
+        <th>Curso</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuariosPesquisa">
+        <td>{{usuario.nome}}</td>
+        <td>{{usuario.cpf}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.nome}}</td>
+        <td>
+          <button type="button" (click)="editar(usuario.id)">
+            Editar
+          </button>
+          <button type="button" (click)="excluir(usuario.id)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

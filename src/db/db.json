@@ -1,0 +1,144 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "admin",
+      "senha": "admin",
+      "cpf": "00000000000",
+      "email": "admin@gmail.com",
+      "celular": "16949494949",
+      "curso": "1",
+      "admin": true
+    },
+    {
+      "id": "4",
+      "nome": "Maria Oliveira",
+      "senha": "mypassword",
+      "cpf": "32165498700",
+      "email": "maria.oliveira@mail.com",
+      "celular": "16949494949",
+      "curso": "1",
+      "admin": false
+    },
+    {
+      "id": "6",
+      "senha": "password123",
+      "nome": "Carlos Souza",
+      "cpf": "65498732100",
+      "email": "carlos.souza@example.com",
+      "curso": "2",
+      "celular": "16959595959",
+      "admin": false
+    },
+    {
+      "id": "7",
+      "senha": "securePass789",
+      "nome": "Ana Pereira",
+      "cpf": "78945612300",
+      "email": "ana.pereira@mail.com",
+      "celular": "16868686868",
+      "curso": "3",
+      "admin": true
+    },
+    {
+      "id": "8",
+      "senha": "pass1234",
+      "nome": "Pedro Almeida",
+      "cpf": "85296374100",
+      "email": "pedro.almeida@example.com",
+      "celular": "16767676767",
+      "curso": "1",
+      "admin": false
+    },
+    {
+      "id": "9",
+      "senha": "mypassword",
+      "nome": "Juliana Costa",
+      "cpf": "96385274100",
+      "email": "juliana.costa@mail.com",
+      "celular": "16749494949",
+      "curso": "2",
+      "admin": false
+    },
+    {
+      "id": "10",
+      "senha": "adminPass",
+      "nome": "Roberto Santos",
+      "cpf": "74185296300",
+      "email": "roberto.santos@example.com",
+      "celular": "16938383838",
+      "curso": "3",
+      "admin": false
+    }
+  ],
+  "disciplinas": [
+    {
+      "id": "12",
+      "nome": "Algoritmos e Estruturas de Dados",
+      "semestre": "1",
+      "curso": "1"
+    },
+    {
+      "id": "13",
+      "nome": "Python",
+      "semestre": "1",
+      "curso": "1"
+    },
+    {
+      "id": "14",
+      "nome": "Banco de Dados NoSQL",
+      "semestre": "1",
+      "curso": "2"
+    },
+    {
+      "id": "15",
+      "nome": "Versionamento com Git",
+      "semestre": "2",
+      "curso": "2"
+    },
+    {
+      "id": "16",
+      "nome": "Design de Interfaces",
+      "semestre": "2",
+      "curso": "2"
+    },
+    {
+      "id": "17",
+      "nome": "React",
+      "semestre": "3",
+      "curso": "2"
+    },
+    {
+      "id": "18",
+      "nome": "Node.js",
+      "semestre": "3",
+      "curso": "3"
+    },
+    {
+      "id": "19",
+      "nome": "DevOps",
+      "semestre": "3",
+      "curso": "3"
+    },
+    {
+      "id": "20",
+      "nome": "Scrum e Agile",
+      "semestre": "4",
+      "curso": "3"
+    }
+  ],
+  "cursos": [
+    {
+      "id": "4",
+      "nome": "Data Science"
+    },
+    {
+      "id": "5",
+      "nome": "Cybersecurity"
+    },
+    {
+      "id": "6",
+      "nome": "Machine Learning"
+    }
+  ]
+}

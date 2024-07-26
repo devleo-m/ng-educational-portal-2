@@ -1,0 +1,36 @@
+<div class="app">
+  <form [formGroup]="formLogin" (ngSubmit)="entrar()">
+    <img src="../../assets/logo.jpg" alt="logo" />
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" formControlName="email" />
+      <span
+        *ngIf="(formLogin.controls['email'].touched || formLogin.controls['email'].dirty) && formLogin.controls['email'].errors?.['required']"
+        >Email obrigatório</span
+      >
+    </div>
+    <div>
+      <label for="senha">Senha:</label>
+      <input
+        type="password"
+        id="senha"
+        name="senha"
+        formControlName="senha"
+      />
+      <span
+        *ngIf="(formLogin.controls['senha'].touched || formLogin.controls['senha'].dirty) && formLogin.controls['senha'].errors?.['required']"
+        >Senha obrigatória</span
+      >
+    </div>
+    <div class="botoes">
+      <button type="button" (click)="cadastrar()">Cadastrar</button>
+      <button
+        (click)="entrar()"
+        type="submit"
+        [disabled]="!formLogin.valid"
+      >
+        Entrar
+      </button>
+    </div>
+  </form>
+</div>
